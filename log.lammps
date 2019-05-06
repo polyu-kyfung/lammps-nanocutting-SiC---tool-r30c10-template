@@ -1,0 +1,4 @@
+LAMMPS (8 Aug 2014)
+USER-CUDA mode is enabled (../lammps.cpp:449)
+shell mkdir pre_cut
+log pre_cut/pre_cut.log
