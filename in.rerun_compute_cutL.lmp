@@ -81,4 +81,4 @@ jump SELF loop
 variable i delete
 variable j delete
 
-shell echo "Rerun has completed -- ${respath}" | mail -s "LAMMPS - rerun done" ***REMOVED***
+shell echo "Rerun has completed -- ${respath}" | mail -s "LAMMPS - rerun done" chris-fung1125@hotmail.com

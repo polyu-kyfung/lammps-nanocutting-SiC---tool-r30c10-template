@@ -489,6 +489,6 @@ restart 1000 pre_cut/cut_sic.restart
 # SIMULATION DONE
 print "All done"
 All done
-shell echo "Cutting simulation has completed -- cut_sic_eq" | mail -s "LAMMPS - simulation done" ***REMOVED***
+shell echo "Cutting simulation has completed -- cut_sic_eq" | mail -s "LAMMPS - simulation done" chris-fung1125@hotmail.com
 shell curl -u ***REMOVED***: https://api.pushbullet.com/v2/pushes -d type=note -d device_iden="***REMOVED***" -d title="Push from KhrisU" -d body="LAMMPS -- Simulation is finish"
 
