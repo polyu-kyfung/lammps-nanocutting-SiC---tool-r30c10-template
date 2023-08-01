@@ -1,0 +1,43 @@
+
+# Re-equilibrium
+
+thermo 	500
+thermo_style custom step c_myCTtemp c_myWPtemp press etotal fmax fnorm
+
+run 0 # 20 ps
+No /omp style for force computation currently active
+WARNING: One or more atoms are time integrated more than once (../modify_cuda.cpp:225)
+Memory usage per processor = 50.7041 Mbytes
+Step myCTtemp myWPtemp Press TotEng Fmax Fnorm 
+       0    319.01838    359.72952    4791.0207   -1020761.7    7.4110873    828.99388 
+WARNING: # CUDA: You asked for a Verlet integration using Cuda, but several fixes have not yet been ported to Cuda.
+This can cause a severe speed penalty due to frequent data synchronization between host and GPU. (../verlet_cuda.cpp:629)
+Loop time of 0.121913 on 1 procs for 0 steps with 148490 atoms
+
+Pair  time (%) = 0 (0)
+Neigh time (%) = 0 (0)
+Comm  time (%) = 0 (0)
+Outpt time (%) = 0 (0)
+Other time (%) = 0.121913 (100)
+
+Nlocal:    148490 ave 148490 max 148490 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    74805 ave 74805 max 74805 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    0 ave 0 max 0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:  1.04842e+07 ave 1.04842e+07 max 1.04842e+07 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 10484236
+Ave neighs/atom = 70.6057
+Neighbor list builds = 0
+Dangerous builds = 0
+
+print "Complete re-equilibrium"
+Complete re-equilibrium
+
+# start cutting
+
+log ${respath}/log_files/cut_sic_cut.log
+log 1.0x100_m_s-1_SiC_EA/log_files/cut_sic_cut.log
